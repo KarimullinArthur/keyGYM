@@ -3,6 +3,9 @@ import getch
 
 text = "Hello world!"
 mistake = 0 
+
+print(text,end='\r')
+
 for x in range(len(text)):
     char = getch.getch()
 
@@ -15,5 +18,6 @@ for x in range(len(text)):
 mistakePercent = mistake/len(text)*100
 mistakePercent = round(mistakePercent,2)
 
-print(f"\n\nmistake {mistakePercent}%")
 print(colorama.Style.RESET_ALL)
+
+print(f"\n\nmistake {mistakePercent}%")
