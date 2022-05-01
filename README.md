@@ -1,2 +1,2 @@
 # keyGYM
-simple CLIkeyboard training
+simple CLI keyboard training
