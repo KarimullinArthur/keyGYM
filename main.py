@@ -1,11 +1,14 @@
-import colorama
 import getch
+import time
+import colorama
 
-text = "Hello world!"
-mistake = 0 
+text = "Hello world!" 
 
 print(text,end='\r')
 
+mistake = 0
+
+start = time.time()
 for x in range(len(text)):
     char = getch.getch()
 
@@ -14,10 +17,18 @@ for x in range(len(text)):
     else:
         print(colorama.Fore.RED,char,   sep='', end='', flush=True )
         mistake += 1
-      
+
+finish = time.time()-start
+finish = round(finish,2)
+
+speed = len(text)/(finish/60)
+speed = round(speed,2)
+
 mistakePercent = mistake/len(text)*100
 mistakePercent = round(mistakePercent,2)
 
 print(colorama.Style.RESET_ALL)
 
 print(f"\n\nmistake {mistakePercent}%")
+print(f"speed (char/min) {speed}")
+print(f"time {finish}s")
