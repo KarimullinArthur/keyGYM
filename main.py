@@ -7,6 +7,7 @@ text = "Hello world!"
 print(text,end='\r')
 
 mistake = 0
+right = 0
 
 start = time.time()
 for x in range(len(text)):
@@ -14,6 +15,7 @@ for x in range(len(text)):
 
     if char == text[x]:
         print(colorama.Fore.GREEN,char, sep='', end='', flush=True)
+        right += 1
     else:
         print(colorama.Fore.RED,char,   sep='', end='', flush=True )
         mistake += 1
@@ -21,7 +23,7 @@ for x in range(len(text)):
 finish = time.time()-start
 finish = round(finish,2)
 
-speed = len(text)/(finish/60)
+speed = right/(finish/60)
 speed = round(speed,2)
 
 mistakePercent = mistake/len(text)*100
