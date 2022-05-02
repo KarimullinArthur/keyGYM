@@ -18,12 +18,14 @@ right = 0
 for x in range(lenght):
     char = getch.getch()
 
-    if x == 0:
-        start = time.time()
+    if char == text[x]:
 
-    elif char == text[x]:
+        if x == 0:
+            start = time.time()
+
         print(colorama.Fore.GREEN,char, sep='', end='', flush=True)
         right += 1
+
     else:
         print(colorama.Fore.RED,char,   sep='', end='', flush=True )
         mistake += 1
