@@ -8,13 +8,15 @@ text = "Hello world!"
 
 print(text,end='\r')
 
+lenght = len(text)
 mistake = 0
 right = 0
 
-start = time.time()
-for x in range(len(text)):
+for x in range(lenght):
     char = getch.getch()
 
+    if x  == 0:
+        start = time.time()
     if char == text[x]:
         print(colorama.Fore.GREEN,char, sep='', end='', flush=True)
         right += 1
@@ -28,7 +30,7 @@ finish = round(finish,2)
 speed = right/(finish/60)
 speed = round(speed,2)
 
-mistakePercent = mistake/len(text)*100
+mistakePercent = mistake/lenght*100
 mistakePercent = round(mistakePercent,2)
 
 print(colorama.Style.RESET_ALL)
