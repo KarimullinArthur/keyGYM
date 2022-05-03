@@ -15,19 +15,12 @@ mistake = 0
 right = 0
 
 text1 = text.split(', ')
-#
-#for x in text1:                                                                                                                                            
-#    if x == text1[-1]:     
-#        print(f"{x}",end='\n',flush=True)                                                                                                                   
-#    else:                                                                                                                                                   
-#        print(f"{x},",end='\n',flush=True)  
 
-print(text1[0],end='\r')
 a = len(text[0])
 for x in range(lenght):
 
     if x == len(text1[0]):
-        print('\b'*a,text1[1],end='\r')
+        print(text1[1],end='\r')
 
     char = getch.getch()
 
