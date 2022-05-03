@@ -4,18 +4,31 @@ import getch
 import time
 import colorama
 
-text = '''My notion was that you had been (Before she had this fit) An obstacle that
-came between Him, and ourselves, and it. Don't let him know she liked them''' 
+text = '''Mahomet was born at Mecca in Arabia, in the year of our Lord 571. He was of the tribe of the Korashites, esteemed the noblest in all that country, and was descended in a direct line, from Pher Koraish, the first founder of it.''' 
 # some text
 
-print(text,end='\r')
+#print(text,end='\r')
 
 # main vars
 lenght = len(text)
 mistake = 0
 right = 0
 
+text1 = text.split(', ')
+#
+#for x in text1:                                                                                                                                            
+#    if x == text1[-1]:     
+#        print(f"{x}",end='\n',flush=True)                                                                                                                   
+#    else:                                                                                                                                                   
+#        print(f"{x},",end='\n',flush=True)  
+
+print(text1[0],end='\r')
+a = len(text[0])
 for x in range(lenght):
+
+    if x == len(text1[0]):
+        print('\b'*a,text1[1],end='\r')
+
     char = getch.getch()
 
     if char == text[x]:
