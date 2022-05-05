@@ -1,2 +1,4 @@
 # keyGYM
-simple CLI keyboard training
+simple CLI keyboard trainer
+
+*just test gitlab mirror*
